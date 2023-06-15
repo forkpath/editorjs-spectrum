@@ -1,0 +1,65 @@
+.spectrum-wrapper {
+    padding: 10px 0;
+}
+
+.spectrum-box {
+    display: flex;
+    border: 1px solid #e4e4e4;
+}
+
+.spectrum-box input {
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.spectrum-box button {
+    color: white;
+    width: 80px;
+    border: none;
+    background: #343434;
+    cursor: pointer;
+}
+
+.spectrum-img {
+    max-width: 100%;
+    margin-bottom: 12px;
+}
+
+.spectrum-wrapper div {
+    text-align: center;
+}
+
+.spectrum-wrapper [contenteditable] {
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.img-gallery {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.gallery-wrapper {
+    width: 25%;
+    outline: 1px solid #ccc;
+}
+
+.img-thumb {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    object-position: center 0%;
+    cursor: pointer;
+}
+
+.no-result {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}

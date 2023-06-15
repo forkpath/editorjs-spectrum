@@ -1,0 +1,28 @@
+{
+  "name": "editorjs-spectrum",
+  "description": "spectrum Tool for Editor.js",
+  "author": {
+    "email": "key7men@gmail.com",
+    "name": "key7men"
+  },
+  "version": "1.0.0",
+  "main": "dist/spectrum.umd.js",
+  "module": "dist/spectrum.mjs",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@codexteam/icons": "^0.1.0",
+    "@editorjs/editorjs": "^2.26.4",
+    "@types/node": "^16.3.3",
+    "ts-loader": "^9.1.0",
+    "typescript": "^4.2.4",
+    "vite": "^3.1.0",
+    "vite-plugin-css-injected-by-js": "^2.1.1"
+  },
+  "dependencies": {
+    "editorjs-inline-image": "^1.2.4"
+  }
+}

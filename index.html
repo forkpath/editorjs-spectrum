@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <title>Editor.js example page</title>
+
+  <style>
+    body {
+      font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+  </style>
+</head>
+<body>
+  <div id="editorjs"></div>
+
+  <button id="save-button">Save</button>
+  <pre id="output"></pre>
+
+  <script type="module">
+    import EditorJS from '@editorjs/editorjs';
+    import Spectrum from './src/index.ts';
+
+    const editor = new EditorJS({
+      tools: {
+        spectrum: {
+          class: Spectrum,
+          config: {
+            url: 'https://api.openai.com/v1/images/generations',
+            method: 'POST',
+            credentials: {
+              'Content-Type': 'application/json',
+              Authorization: 'Bearer your_key'
+            }
+          },
+        }
+      },
+
+      data: {
+        blocks: [
+          {
+            type: 'spectrum',
+            data: {
+              url: 'https://codevoweb.com/wp-content/uploads/2023/03/Setup-and-Use-NextAuth.js-in-Next.js-13-App-Directory.webp?ezimgfmt=ng:webp/ngcb1',
+              caption: 'NextAuth.js Intro',
+              description: 'NextAuth.js Intro',
+            },
+          }
+        ],
+      },
+    });
+
+    const saveButton = document.getElementById('save-button');
+    const output = document.getElementById('output');
+
+    saveButton.addEventListener('click', () => {
+      editor.save().then( savedData => {
+        output.innerHTML = JSON.stringify(savedData, null, 4);
+      })
+    })
+  </script>
+</body>
+</html>
+
