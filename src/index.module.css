@@ -63,3 +63,8 @@
     text-align: center;
     margin: 20px;
 }
+
+.overlay {
+    height: 100%;
+    border: none;
+}

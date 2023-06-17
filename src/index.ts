@@ -155,6 +155,7 @@ export default class Spectrum implements BlockTool {
     });
     this.nodes.btn.innerHTML = 'Generate';
     this.nodes.btn.addEventListener('click', async (event) => {
+      event.preventDefault();
       const description = input.value;
 
       if (!this.btnLoading) {
@@ -195,7 +196,7 @@ export default class Spectrum implements BlockTool {
 
     this.btnLoading = true;
     this.nodes.btn!.innerHTML = '';
-    this.nodes.btn!.appendChild(make('div', this.api.styles.loader));
+    this.nodes.btn!.appendChild(make('div', [styles['overlay'], this.api.styles.loader]));
 
     if (!this.nodes.imgGallery) {
       this.nodes.imgGallery = make('div', styles['img-gallery'])
